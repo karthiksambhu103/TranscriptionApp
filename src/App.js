@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
+import Transcription from './components/Transcription';
 
 function App() {
+  console.log('Deepgram API Key:', process.env.REACT_APP_DEEPGRAM_API_KEY);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <h1 style={{display:'flex', justifyContent:'center', alignItems:'center'}}>Audio Transcription App</h1>
+      <Transcription />
+      
     </div>
   );
 }
